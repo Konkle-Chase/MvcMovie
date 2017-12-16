@@ -1,0 +1,90 @@
+﻿@model SacramentMeetingPlanner.Models.PlannedMeeting
+
+@{
+    ViewData["Meeting"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Planned Sacrament Meeting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Meeting)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meeting)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Conductor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Conductor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningSong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningSong)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartPrayer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartPrayer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SacramentSong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SacramentSong)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sacrament)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sacrament)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerOne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerOne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerTwo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerTwo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionalSong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OptionalSong)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeakerThree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SpeakerThree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingSong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClosingSong)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndPrayer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndPrayer)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:lightgray;
 }
 
 /* Wrapping element */
@@ -14,12 +15,18 @@
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
+    /*background-color: blueviolet;*/
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
+
+.navbar {
+    background-color:darkslateblue;
+}
+
 
 /* QR code generator */
 #qrCode {
@@ -32,4 +39,5 @@
     .carousel-caption {
         display: none;
     }
+
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace MvcMovie.Models
+namespace SacramentMeetingPlanner.Models
 {
     public class ErrorViewModel
     {

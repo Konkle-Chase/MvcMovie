@@ -1,0 +1,113 @@
+﻿@model SacramentMeetingPlanner.Models.MeetingDateViewModel
+
+@{
+    ViewData["Meeting"] = "Home";
+}
+
+<h2>Planned Sacrament Meetings </h2>
+
+<p>
+    <a asp-action="Create">Plan A Sacrament Meeting</a>
+</p>
+
+<form asp-controller="MeetingPlanner" asp-action="Index" method="get">
+    <p>
+        <select asp-for="meetingDate" asp-items="Model.meetings">
+            <option value="">All</option>
+        </select>
+
+        Sacrament Meeting Date: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].Meeting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].Conductor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].OpeningSong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].StartPrayer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].SacramentSong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].Sacrament)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].SpeakerOne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].SpeakerTwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].OptionalSong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].SpeakerThree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].ClosingSong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plannedMeetings[0].EndPrayer)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.plannedMeetings)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Meeting)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Conductor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpeningSong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartPrayer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SacramentSong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sacrament)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpeakerOne)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpeakerTwo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OptionalSong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpeakerThree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClosingSong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndPrayer)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
