@@ -32,7 +32,7 @@ namespace SacramentMeetingPlanner.Models
                          OptionalSong = "",
                          SpeakerThree = "Brother Tim",
                          ClosingSong = "165",
-                         EndPrayer = "Christine Konkle"
+                         //EndPrayer = "Christine Konkle"
                      },
 
                      new PlannedMeeting
@@ -48,7 +48,7 @@ namespace SacramentMeetingPlanner.Models
                          OptionalSong = "106",
                          SpeakerThree = "Brother Smith",
                          ClosingSong = "156",
-                         EndPrayer = "Gina Russell"
+                         //EndPrayer = "Gina Russell"
                      },
 
                      new PlannedMeeting
@@ -64,7 +64,7 @@ namespace SacramentMeetingPlanner.Models
                          OptionalSong = "",
                          SpeakerThree = "Brother Hatch",
                          ClosingSong = "193",
-                         EndPrayer = "Devin Kelm"
+                         //EndPrayer = "Devin Kelm"
                      }                  
                 );
                 context.SaveChanges();
